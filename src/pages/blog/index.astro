@@ -14,7 +14,7 @@ const posts = (await getCollection("blog")).sort(
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} tags={[]}/>
 	</head>
 	<body>
 		<Header />
@@ -27,17 +27,14 @@ const posts = (await getCollection("blog")).sort(
 								<article class="flex flex-col space-y-2 xl:space-y-0">
 									
 										<dl>
-											
 												<dt class="sr-only">
 													Published on
 												</dt>
 												<dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
 													<FormattedDate date={post.data.pubDate} />
 												</dd>
-											
 										</dl>
 										<div class="space-y-3">
-											
 												<div>
 													
 														<h2 class="text-2xl font-bold leading-8 tracking-tight">
@@ -66,7 +63,6 @@ const posts = (await getCollection("blog")).sort(
 												<div class="prose max-w-none text-gray-500 dark:text-gray-400">
 													{post.data.description}
 												</div>
-											
 										</div>
 									
 								</article>
